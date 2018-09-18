@@ -1,0 +1,3 @@
+[submodule "react-native-app/submodules/react-native-bluetooth-serial"]
+	path = react-native-app/submodules/react-native-bluetooth-serial
+	url = https://github.com/jhonber/react-native-bluetooth-serial.git
