@@ -4099,6 +4099,12 @@ react-native-animatable@^1.2.4:
   dependencies:
     buffer "^5.2.0"
 
+"react-native-color-picker@file:submodules/react-native-color-picker":
+  version "0.4.0"
+  dependencies:
+    prop-types "^15.5.10"
+    tinycolor2 "^1.4.1"
+
 react-native-modal@^6.5.0:
   version "6.5.0"
   resolved "https://registry.yarnpkg.com/react-native-modal/-/react-native-modal-6.5.0.tgz#46220b2289a41597d344c1db17454611b426a758"
@@ -4111,6 +4117,12 @@ react-native-spinkit@^1.1.1:
   resolved "https://registry.yarnpkg.com/react-native-spinkit/-/react-native-spinkit-1.1.1.tgz#3ae512f3978bc750b7c02639911e1710750d8539"
   dependencies:
     prop-types "^15.5.8"
+
+react-native-tab-view@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-native-tab-view/-/react-native-tab-view-1.0.2.tgz#66e0bc6d38a227ed2b212e3a256b7902f6ce02ed"
+  dependencies:
+    prop-types "^15.6.1"
 
 react-native@0.57.0:
   version "0.57.0"
@@ -4864,6 +4876,10 @@ through@^2.3.6:
 time-stamp@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/time-stamp/-/time-stamp-1.1.0.tgz#764a5a11af50561921b133f3b44e618687e0f5c3"
+
+tinycolor2@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/tinycolor2/-/tinycolor2-1.4.1.tgz#f4fad333447bc0b07d4dc8e9209d8f39a8ac77e8"
 
 tmp@^0.0.33:
   version "0.0.33"

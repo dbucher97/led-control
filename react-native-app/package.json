@@ -10,8 +10,10 @@
     "react": "16.5.0",
     "react-native": "0.57.0",
     "react-native-bluetooth-serial": "file:submodules/react-native-bluetooth-serial/",
+    "react-native-color-picker": "file:submodules/react-native-color-picker/",
     "react-native-modal": "^6.5.0",
-    "react-native-spinkit": "^1.1.1"
+    "react-native-spinkit": "^1.1.1",
+    "react-native-tab-view": "^1.0.2"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",

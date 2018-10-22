@@ -1,3 +1,6 @@
 [submodule "react-native-app/submodules/react-native-bluetooth-serial"]
 	path = react-native-app/submodules/react-native-bluetooth-serial
 	url = https://github.com/jhonber/react-native-bluetooth-serial.git
+[submodule "react-native-app/submodules/react-native-color-picker"]
+	path = react-native-app/submodules/react-native-color-picker
+	url = git@github.com:dbucher97/react-native-color-picker.git
