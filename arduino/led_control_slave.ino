@@ -2,8 +2,8 @@
 #include<FastLED.h>
 #include<SoftwareSerial.h>
 
-#define NUM_LEDS_1   10
-#define NUM_LEDS_2   1
+#define NUM_LEDS_1   23
+#define NUM_LEDS_2   23
 
 #define DATA_PIN_1   2
 #define DATA_PIN_2   3
@@ -116,7 +116,7 @@ class LED{
     }
 
 
-    bool loop(){ 
+    bool loop_1(){ 
       bool ret = false;
       if(state == COLOR){
         fill_solid(leds, num, current);
@@ -247,8 +247,8 @@ LED *strip1;
 LED *strip2;
 
 void setup() {
-  FastLED.addLeds<WS2811, DATA_PIN_1, GRB>(leds1, NUM_LEDS_1);//.setCorrection( 0xAFFFC0 );
-  FastLED.addLeds<WS2812B, DATA_PIN_2, GRB>(leds2, NUM_LEDS_2);
+  FastLED.addLeds<WS2812B, DATA_PIN_1, RGB>(leds1, NUM_LEDS_1);//.setCorrection( 0xAFFFC0 );
+  FastLED.addLeds<WS2812B, DATA_PIN_2, RGB>(leds2, NUM_LEDS_2);
 
   strip1 = new LED(leds1, NUM_LEDS_1);
   strip2 = new LED(leds2, NUM_LEDS_2);
@@ -260,21 +260,23 @@ void setup() {
   t = micros();
 }
 
+byte readByte(){
+  byte c = 0;
+  while(!Serial.available()){
+    delayMicroseconds(500);
+    c++;
+    if(c > 100){
+      return 0;
+    }
+  }
+  return Serial.read();
+}
 
-void loop() {
-  while(Serial.available()){
-    handleInput();
-    /* Serial.println("handleInput"); */
-  }
-  bool a = strip1->loop();
-  bool b = strip2->loop();
-  if(a||b){
-    FastLED.show();
-    strip1->closeLoop();
-    strip2->closeLoop();
-  }
-  FastLED.show();
-  fps();
+CRGB readColor(){
+  byte r = readByte();
+  byte g = readByte();
+  byte b = readByte();
+  return CRGB(r, g, b);
 }
 
 void handleInput(){
@@ -355,25 +357,6 @@ void handleInput(){
 }
 
 
-CRGB readColor(){
-  byte r = readByte();
-  byte g = readByte();
-  byte b = readByte();
-  return CRGB(r, g, b);
-}
-
-byte readByte(){
-  byte c = 0;
-  while(!Serial.available()){
-    delayMicroseconds(500);
-    c++;
-    if(c > 100){
-      return 0;
-    }
-  }
-  return Serial.read();
-}
-
 void fps() {
   int dt1 = micros()-t;
   int wait = (16666-dt1)/1000;
@@ -389,3 +372,18 @@ void fps() {
   t = micros();
 }
 
+void loop() {
+  while(Serial.available()){
+    handleInput();
+    /* Serial.println("handleInput"); */
+  }
+  bool a = strip1->loop_1();
+  bool b = strip2->loop_1();
+  if(a||b){
+    FastLED.show();
+    strip1->closeLoop();
+    strip2->closeLoop();
+  }
+  FastLED.show();
+  fps();
+}
