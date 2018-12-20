@@ -1,4 +1,4 @@
-package com.ledcontrol;
+package com.dbucher.ledcontrol;
 
 import com.facebook.react.ReactActivity;
 
