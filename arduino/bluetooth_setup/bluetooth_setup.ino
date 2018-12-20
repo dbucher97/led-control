@@ -1,9 +1,8 @@
 #include <AltSoftSerial.h>
 
-#define NAME 	"HK-Laterne"
-#define PIN	"1888"
+#define NAME 	"YOUR-NAME"
+#define PIN	"PIN" //4 digits.
 #define WAIT	1000
-
 AltSoftSerial btSerial;
 
 bool commandRecording = false;
