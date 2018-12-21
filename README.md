@@ -64,11 +64,11 @@ solid colors of the gradient.
 of), a moving and trailing point and a strobo flash. With sliders, you can
 adjust some of the parameters.
 
-With the button in the title bar you can swap between the led strips, there are
+With the button in the title bar you can swap between the led strips; there are
 three possibilities '1+2', '1' and '2'.
 
 # Dependencies used
 Arduino sketch:
-- ![AltSoftSerial](https://github.com/PaulStoffregen/AltSoftSerial)
+- ![AltSoftSerial](https://github.com/PaulStoffregen/AltSoftSerial "test")
 
 
