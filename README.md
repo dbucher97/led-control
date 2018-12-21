@@ -13,3 +13,4 @@ To control your own LEDs you will first have to assemble the hardware components
  - Some kind of powersupply, keep in mind that for 12V LEDs, you will need an extra 5V supply for the Arduino.
 
 In the beginning you have to connect the devices in the following way: 
+

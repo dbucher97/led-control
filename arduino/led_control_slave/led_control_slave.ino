@@ -2,8 +2,10 @@
 #include<FastLED.h>
 #include<AltSoftSerial.h>
 
-#define NUM_LEDS_1   23
-#define NUM_LEDS_2   23
+#define NUM_LEDS_1   10
+#define NUM_LEDS_2   10
+
+// AltSoftSerial RX_PIN 9, TX_PIN 8
 
 #define DATA_PIN_1   2
 #define DATA_PIN_2   3
