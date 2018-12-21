@@ -14,3 +14,8 @@ To control your own LEDs you will first have to assemble the hardware components
 
 In the beginning you have to connect the devices in the following way: 
 
+![breakboard](circuit_bb.png)
+![schema](circuit_schem.png)
+Idk why the Neopixels are so big in the Fritzing Library.
+
+
