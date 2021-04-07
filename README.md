@@ -1,5 +1,7 @@
 # LED-Control
 
+*THIS PROJECT IS NO LONGER MAINTAINED.*
+
 This is a project of mine for an App which is able to control a NeoPixel LED
 strip through bluetooth connection and an Arduino (Nano).
 The code is now fully functional and the updated version is now on the Google
